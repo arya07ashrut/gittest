@@ -1,0 +1,12 @@
+<?php
+$roll=$_POST['no'];
+$name=$_POST['name'];
+$marks=$_POST['marks'];
+
+$con=mysqli_connect('localhost','root');
+mysqli_select_db($con,'db');
+$q="insert into student (roll_no,name,marks)values($roll,'$name',$marks)";
+mysqli_query($con,$q);
+mysqli_close($con);
+echo "data entered successfully";
+?>

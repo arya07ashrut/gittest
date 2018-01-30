@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>
+insert book data</title>
+<script>
+function validate()
+{
+var result=true;
+var c=confirm("do you want to insert?");
+if(c==0)
+{result=false;
+return(result);
+}
+else return(result);
+}
+</script>
+</head>
+<body>
+<h1>book record management</h1><hr/>
+<div style="border:5px solid orange">
+<form action="insert1.php" method="post" onsubmit="return validate()" >
+<table>
+<tr>
+<th style="text-align:left">enter book name</th><th><input type="test" name="title" required/></th>
+</tr>
+<tr>
+<th>enter author's name</th><th><input type="text" name="author" required/></th>
+<tr>
+<th style="text-align:left">enter price</th><th><input type ="text" name="price"/></th>
+</tr>
+<tr><th><input type="submit" value="insert"/><input type="reset"/></th></tr>
+
+</table>
+</form>
+</div>
+</body>
+</html>
